@@ -11,7 +11,7 @@ const start = document.querySelector('[data-action = "start"]');
 const stop = document.querySelector('[data-action = "stop"]');
 const body = document.querySelector("body");
 let intervalId;
-
+console.log(start);
 const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
@@ -22,10 +22,10 @@ const startChange = function () {
     const min = 0;
     const max = colors.length - 1;
     let i = randomIntegerFromInterval(min, max);
-    console.log((body.style.backgroundColor = `${colors[i]}`));
+    body.style.backgroundColor = `${colors[i]}`;
   }, 1000);
 };
-console.log(startChange);
+
 const stopChange = function () {
   clearInterval(intervalId);
   start.removeAttribute("disabled");
