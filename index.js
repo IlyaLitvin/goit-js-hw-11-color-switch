@@ -22,9 +22,10 @@ const startChange = function () {
     const min = 0;
     const max = colors.length - 1;
     let i = randomIntegerFromInterval(min, max);
-    body.style.backgroundColor = colors[i];
+    console.log((body.style.backgroundColor = `${colors[i]}`));
   }, 1000);
 };
+console.log(startChange);
 const stopChange = function () {
   clearInterval(intervalId);
   start.removeAttribute("disabled");
